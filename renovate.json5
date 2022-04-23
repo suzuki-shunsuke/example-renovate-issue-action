@@ -1,0 +1,10 @@
+{
+  extends: [
+    "config:base",
+    "github>aquaproj/aqua-renovate-config#0.1.9",
+  ],
+  "prHourlyLimit": 0,
+  "prBodyNotes": [
+    "<!-- renovate-issue-action: {\"packageFileDir\": \"{{packageFileDir}}\", \"packageName\": \"{{packageName}}\", \"groupName\": \"{{groupName}}\", \"depName\": \"{{depName}}\", \"manager\": \"{{manager}}\", \"updateType\": \"{{updateType}}\"} -->"
+  ],
+}

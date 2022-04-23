@@ -1,0 +1,14 @@
+---
+# aqua - Declarative CLI Version Manager
+# https://aquaproj.github.io/
+registries:
+- type: standard
+  ref: v2.7.0 # renovate: depName=aquaproj/aqua-registry
+- type: local
+  name: local
+  path: registry.yaml
+packages:
+- name: suzuki-shunsuke/renovate-issue-action@v0.1.0-0
+  registry: local
+- name: rhysd/actionlint@v1.6.12
+- name: reviewdog/reviewdog@v0.14.1
