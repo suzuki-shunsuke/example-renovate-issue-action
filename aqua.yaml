@@ -11,4 +11,4 @@ packages:
 - name: suzuki-shunsuke/renovate-issue-action@v0.1.0-1
   registry: local
 - name: rhysd/actionlint@v1.6.12
-- name: reviewdog/reviewdog@v0.14.0
+- name: reviewdog/reviewdog@v0.14.1
