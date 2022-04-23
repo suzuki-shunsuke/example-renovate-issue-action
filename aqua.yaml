@@ -8,7 +8,7 @@ registries:
   name: local
   path: registry.yaml
 packages:
-- name: suzuki-shunsuke/renovate-issue-action@v0.1.0-0
+- name: suzuki-shunsuke/renovate-issue-action@v0.1.0-1
   registry: local
 - name: rhysd/actionlint@v1.6.12
 - name: reviewdog/reviewdog@v0.14.0
