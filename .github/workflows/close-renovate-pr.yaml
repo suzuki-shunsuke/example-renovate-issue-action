@@ -9,7 +9,8 @@ permissions:
   issues: write
   contents: read
 jobs:
-  build:
+  renovate-issue-action:
+    if: github.event.pull_request.user.login == 'renovate[bot]'
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
