@@ -1,0 +1,29 @@
+---
+name: renovate-issue-action
+on:
+  # https://github.community/t/sometimes-github-actions-isnt-triggered-by-pull-request-closed-event/250234/4
+  # > GitHub doesn’t queue the merge commit job for closed PRs; So workflows using on: { pull_request: { types: [“closed”] } } will not consistently be triggered
+  # > The workaround is to use a pull_request_target trigger as those do not require a merge commit but run the workflow from the target branch.
+  # > But take note of the warnings in the docs below.
+  # > https://docs.github.com/en/actions/reference/events-that-trigger-workflows#pull_request_target
+  # In this case, we checkout the default branch, so we can use pull_request_target safely.
+  pull_request_target:
+    branches: [main]
+    types:
+    - closed
+permissions:
+  issues: write
+  contents: read
+jobs:
+  renovate-issue-action:
+    if: github.event.pull_request.user.login == 'renovate[bot]'
+    runs-on: ubuntu-latest
+    steps:
+    # Checkout default branch for security
+    - uses: actions/checkout@v3
+    - uses: aquaproj/aqua-installer@v1.0.0
+      with:
+        aqua_version: v1.6.0
+    - run: renovate-issue-action
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
