@@ -5,6 +5,6 @@ registries:
 - type: standard
   ref: v3.4.0 # renovate: depName=aquaproj/aqua-registry
 packages:
-- name: suzuki-shunsuke/renovate-issue-action@v0.3.1
+- name: suzuki-shunsuke/renovate-issue-action@v0.3.2
 - name: rhysd/actionlint@v1.6.13
 - name: reviewdog/reviewdog@v0.14.1
