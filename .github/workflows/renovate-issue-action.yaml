@@ -21,7 +21,7 @@ jobs:
     steps:
     # Checkout default branch for security
     - uses: actions/checkout@v3
-    - uses: aquaproj/aqua-installer@v1.0.0
+    - uses: aquaproj/aqua-installer@v2.3.2
       with:
         aqua_version: v1.14.0
     - run: renovate-issue-action
