@@ -20,4 +20,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+      with:
+        persist-credentials: false
     - uses: suzuki-shunsuke/github-action-renovate-config-validator@v0.1.2
