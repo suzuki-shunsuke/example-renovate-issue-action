@@ -26,7 +26,7 @@ jobs:
         persist-credentials: false
     - uses: aquaproj/aqua-installer@v1.0.0
       with:
-        aqua_version: v1.14.0
+        aqua_version: v2.41.0
     - run: renovate-issue-action
       env:
         GITHUB_TOKEN: ${{ github.token }}
